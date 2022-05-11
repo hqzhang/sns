@@ -30,6 +30,7 @@ install:
   - lsb_release -a
   - sbt clean update
   - bundle install
+  - docker pull composer/composer:1-alpine
   - docker run -d -p 9324:9324 s12v/elasticmq
   - docker run -it -v "$PWD":/tmp -w /tmp composer/composer:1-alpine install
 
