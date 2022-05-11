@@ -27,7 +27,7 @@ services:
   - docker
 
 install:
-  - lsb_release -a command
+  - lsb_release -a
   - sbt clean update
   - bundle install
   - docker run -d -p 9324:9324 s12v/elasticmq
